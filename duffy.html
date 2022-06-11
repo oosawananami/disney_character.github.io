@@ -1,0 +1,133 @@
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>勝手にdisneyキャラクター紹介</title>
+    <link rel="stylesheet" type="text/css" href="disney.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <h2>DUFFY AND FRIENDS</h2>
+    <div id = "mokuji">
+        <ul>
+          <!-- <li id ="header"> -->
+            <a href="character.html">Home</a>
+            <a href="mickey.html">MICKEY</a>
+          <!-- </li> -->
+        </ul>
+      </div>
+  </header>
+
+<div class="inner">
+  <ul class="modal_trigger">
+    <li class="modal_btn"><image src="Duffy.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="Shellymey.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="Jella.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="Lou_.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="Ann.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="Olu.png"  width="400" height="400"></li>
+  </ul>
+
+
+  <div class="modal_area">
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>ダッフィー<br/>
+             ミッキーのためにミニーが作ってくれた<br/>
+             もふもふでぽわぽわ<br/>
+             D・U・F・F・Y<br/>
+           </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+     <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+            <p>シェリーメイ<br/>
+               だいすき<br/>
+               フリフリのお洋服が似合う<br/>
+               おっとり物静かなおんなのこ<br/>
+             </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>ジェラトーニ<br/>
+             げんきで明るい<br/>
+             絵が描けるイタリア男児<br/>
+             しっぽで絵を描くよ<br/>
+           </p>
+        </div>
+        <div class="modal_close">×</div>
+     </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+            <p>ステラルー<br/>
+               ブロードウェイのダンサーを目指すおんなのこ<br/>
+               ステップトゥシャインというショーで舞浜デビュー<br/>
+               <br/>
+             </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>クッキーアン<br/>
+             ワッフルもってきた女の子<br/>
+             この春お披露目の予定が<br/>
+             休園の影響で中止に・・・<br/>
+           </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+            <p>オル・メル<br/>
+               ハワイ生まれの子<br/>
+               今年の夏に日本に仲間入り<br/>
+               グッズはパーク内でも買えるようになった<br/>
+             </p>
+          </div>
+        <div class="modal_close">×</div>
+        </div>
+      </div>
+    </div>
+          </div>
+
+          <footer>
+          <a href = "character.html">TOP</a>
+          </footer>
+<script>
+// モーダルが複数ある場合
+ $(function () {
+
+   // モーダルのボタンをクリックした時
+   $('.modal_trigger .modal_btn').on('click', function() {
+     var btnIndex = $(this).index(); // 何番目のモーダルボタンかを取得
+     $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
+   });
+
+   // ×やモーダルの背景をクリックした時
+   $('.modal_close , .modal_bg').click(function(){
+     $('.modal_box').fadeOut(); // モーダルを非表示にする
+   });
+ });
+</script>
+</body>

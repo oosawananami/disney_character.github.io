@@ -1,0 +1,182 @@
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>勝手にdisneyキャラクター紹介</title>
+    <link rel="stylesheet" type="text/css" href="disney.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h2>MICKEY AND FRIENDS</h2>
+    <div id = "mokuji">
+        <ul>
+          <!-- <li id ="header"> -->
+            <a href="character.html">Home</a>
+            <a href="duffy.html">DUFFY</a>
+          <!-- </li> -->
+        </ul>
+    </div>
+  </header>
+
+<div class="inner">
+
+  <div all>
+  <ul class="modal_trigger">
+    <li class="modal_btn"><image src="mickey.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="minie.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="pluto.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="title.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="donald.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="daisy.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="chip.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="dale.png"  width="400" height="400"></li>
+    <li class="modal_btn"><image src="goofy.png"  width="400" height="400"></li>
+  </ul>
+</div>
+
+  <div class="modal_area">
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>ミッキー<br/>
+             みんなのクラブのリーダー<br/>
+             誕生日：11月18日<br/>
+             『蒸気船ウィリー』でデビュー<br/>
+           </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>ミニー<br/>
+            絶対的な存在<br/>
+            2020年1月にはミニーちゃんメインのショーが開催<br/>
+            1年限定という事もありかなり人気だったが休園のため中止でした。<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>プルート<br/>
+            ミッキーの忠犬<br/>
+            ミキミニのチューを真顔で見てたりする<br/>
+            でもミッキー大好きな感じがいい<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>ドナルド<br/>
+            毎回色々やらかしてくれる<br/>
+            活舌悪すぎて何言っているかわからないこと多い<br/>
+            もふもふのお尻がいい<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>デイジー<br/>
+            セクシーなおねえさん<br/>
+            ミニーさんとは違った可愛さ<br/>
+            やっぱりお尻が最高<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>チップ<br/>
+            声が高い方<br/>
+            悪ガキ感<br/>
+            笑い方<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>デール<br/>
+            鼻が赤い方<br/>
+            足短い<br/>
+            そこがかわいい<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+    <div class="modal_box">
+      <div class="modal_bg"></div>
+      <div class="modal_inner">
+        <div class="modal_block">
+          <p>グーフィー<br/>
+            普段あっひょとか言ってるけど<br/>
+            超絶かっこよくなったりするいけおじ<br/>
+            マックスがいるとパパの顔になる。すき。<br/>
+          </p>
+        </div>
+        <div class="modal_close">×</div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+<a href = "character.html">TOP</a>
+</footer>
+<script>
+// モーダルが複数ある場合
+ $(function () {
+
+   // モーダルのボタンをクリックした時
+   $('.modal_trigger .modal_btn').on('click', function() {
+     var btnIndex = $(this).index(); // 何番目のモーダルボタンかを取得
+     $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
+   });
+
+   // ×やモーダルの背景をクリックした時
+   $('.modal_close , .modal_bg').click(function(){
+     $('.modal_box').fadeOut(); // モーダルを非表示にする
+   });
+ });
+ /*モーダル一つのとき
+$(function(){
+
+  $(".mikey").css("color","white")
+
+$('#open').on('click',function(){
+    $('.popup').addClass('show').fadeIn();
+});
+
+$('#close').on('click',function(){
+    $('.popup').fadeOut();
+
+});
+});*/
+</script>
+</body>
